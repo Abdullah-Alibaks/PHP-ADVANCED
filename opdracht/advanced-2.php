@@ -22,7 +22,7 @@
     <th>Value</th>
 </tr>
 
-<?php
+<?php 
     $student = array("Naam"=>"Abdullah Alibaks",
                      "Afkomst"=>"Nederlands/Surinaams", 
                      "Klas"=>"0A", 
@@ -30,13 +30,22 @@
                      "Woonplaats"=>"Amsterdam", 
                      "Favoriete sport"=>"voetbal", 
                      "Favoriete voetbalclub"=>"AFC Ajax");
-    foreach($student as $key => $value){?>
-        <tr>
-        <td><?php echo $key?></td>
-        <td><?php echo $value?></td>
-        </tr>
-        
-        <?php } ?>
+
+    function maakTabel($sleutel, $waarde){ 
+        echo "<tr>";
+        echo "<td>$sleutel</td>";
+        echo "<td>$waarde</td>";
+        echo "</tr>";
+     } 
+
+ foreach($student as $key => $value){
+     maakTabel($key, $value);
+}
+
+?>
+
+
+
 
 </table>
 </body>
